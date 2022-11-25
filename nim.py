@@ -15,12 +15,13 @@ screen.fill(COULEUR_FOND)
 
 # load matchstick (ms)
 ms = pg.image.load('ms.png').convert_alpha()
-ms = pg.transform.scale(ms, (60, 100))
+l = 60
+h = 100
+ms = pg.transform.scale(ms, (l, h))
 
 allumettes = []
 for i in range(12):
-    position = (10 + i * 20, 10)
-    rec = pg.Rect((i*10, 0, 10 + i * 20, 10))
+    rec = pg.Rect((10 + i*l, 0, l, h))
     screen.blit(ms, rec)
     allumettes.append(rec)
 
