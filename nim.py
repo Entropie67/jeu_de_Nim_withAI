@@ -33,6 +33,8 @@ while running:
         if event.type == pg.MOUSEBUTTONDOWN and event.button == 1:
             p= pg.mouse.get_pos()
             print(p)
+            if allumettes[0].collidepoint(p):
+                print("boum")
         elif event.type == pg.QUIT:
             pg.quit()
     pg.display.update()
