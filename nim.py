@@ -31,10 +31,11 @@ running = True
 while running:
     for event in pg.event.get():
         if event.type == pg.MOUSEBUTTONDOWN and event.button == 1:
-            p= pg.mouse.get_pos()
-            print(p)
-            if allumettes[0].collidepoint(p):
-                print("boum")
+            p = pg.mouse.get_pos()
+            for a in allumettes:
+                if a.collidepoint(p):
+                    print(f"Vous avez cliquez sur l'allumette numéro {allumettes.index(a) + 1}")
+
         elif event.type == pg.QUIT:
             pg.quit()
     pg.display.update()
