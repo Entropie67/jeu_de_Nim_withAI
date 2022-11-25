@@ -14,9 +14,11 @@ screen.fill(COULEUR_FOND)
 
 # load matchstick (ms)
 ms = pg.image.load('ms.png').convert_alpha()
-ms = pg.transform.scale(ms, (20, 100))
-screen.blit(ms, (10, 10))
-
+ms = pg.transform.scale(ms, (50, 100))
+for i in range (12):
+    screen.blit(ms, (10 + i * 20, 10))
+pos = ms.get_rect()
+print(pos)
 
 
 running = True
