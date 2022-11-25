@@ -28,8 +28,11 @@ while game:
     affichage()
     print(f"\nAu tour de  : {p[i%2]}\n")
     if not i%2:
-        choix = int(input(f"\n Votre choix (1, 2 ou 3) : "))
-        assert choix in [1, 2, 3], "Tu es venu sans ton cerveau ?"
+        juste = True
+        while juste:
+            choix = int(input(f"\n Votre choix (1, 2 ou 3) : "))
+            if choix in [1, 2, 3]:
+                juste = False
     else:
         print("IA")
         if len(AI[position]) == 0:
@@ -54,5 +57,9 @@ while game:
         print("\nLa machine gagne\n")
         alu = [True for i in range(12)]
         position = 0
+    elif ab:
+        alu = [True for i in range(12)]
+        position = 0
+        ab = False
     print(AI)
     i += 1
