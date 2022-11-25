@@ -1,10 +1,17 @@
 from random import choice
+
+# Initiation de l'IA
 AI = [[1, 2, 3] for i in range(10)]
 AI.append([1, 2])
 AI.append([1])
+
+# Placement des allumettes
 alu = [True for i in range(12)]
 position = 0
-ab = False
+
+ab = False # Variable d'abandon de l'IA
+
+
 def affichage():
     for a in alu:
         if a:
@@ -12,8 +19,9 @@ def affichage():
         else:
             print("_")
 
+
 game = True
-p = ["Humain", "HALL9000"]
+p = ["Humain", "STURM 9000"]
 i = 0
 while game:
     affichage()
