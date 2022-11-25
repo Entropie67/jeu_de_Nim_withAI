@@ -41,7 +41,7 @@ while game:
             ab = True
         else:
             choix_ia = choice(AI[position])
-        choix = choix_ia
+            choix = choix_ia
 
     print(f"{choix} allumette(s) retirée(s)")
     position += choix
@@ -59,6 +59,7 @@ while game:
         position = 0
     elif ab:
         alu = [True for i in range(12)]
+        AI[position - choix - choix_ia].remove(choix_ia)
         position = 0
         ab = False
     print(AI)
