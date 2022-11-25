@@ -35,7 +35,6 @@ while running:
             for a in allumettes:
                 if a.collidepoint(p):
                     print(f"Vous avez cliquez sur l'allumette numéro {allumettes.index(a) + 1}")
-
         elif event.type == pg.QUIT:
             pg.quit()
     pg.display.update()
