@@ -30,7 +30,9 @@ running = True
 
 while running:
     for event in pg.event.get():
-        if event.type == pg.QUIT:
+        if event.type == pg.MOUSEBUTTONDOWN and event.button == 1:
+            print("coucou")
+        elif event.type == pg.QUIT:
             pg.quit()
     pg.display.update()
     pg.display.flip()
